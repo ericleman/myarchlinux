@@ -140,13 +140,13 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Setting root password'
-  echo -en "mypassword\nmypassword" | passwd
+  echo -en "fnVfKv\nfnVfKv" | passwd
 
   echo '************************************************'
   echo '************************************************'
   echo '**************** Creating initial user'
   useradd -m -s /bin/bash -G adm,systemd-journal,wheel,rfkill,games,network,video,audio,optical,floppy,storage,scanner,power -c "Eric" eric
-  echo -en "mypassword\nmypassword" | passwd "eric"
+  echo -en "fnVfKv\nfnVfKv" | passwd "eric"
 
   echo '************************************************'
   echo '************************************************'
@@ -253,6 +253,7 @@ configure() {
   chown eric /home/eric/.config/skippy-xd/skippy-xd.rc
   chmod 644 /home/eric/.config/skippy-xd/skippy-xd.rc
 
+  su eric -c "mkdir -p /home/eric/.config/Thunar"
   cp /scripts/uca.xml /home/eric/.config/Thunar/uca.xml
   chown eric /home/eric/.config/Thunar/uca.xml
   chmod 644 /home/eric/.config/Thunar/uca.xml
