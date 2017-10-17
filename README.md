@@ -19,12 +19,15 @@ If the ISO is for a Macbook, then in ~/arch-installer/airootfs/root/arch-eric-se
 `#mv /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.kmap.gz /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.map.gz`
 
 `#echo 'KEYMAP="mac-fr-ext_new"' >> /etc/vconsole.conf`
+
 And comment this one:
 
 `echo 'KEYMAP="fr-pc"' >> /etc/vconsole.conf`
+
 And in ~/arch-installer/airootfs/root/scripts/xprofile, put:
 
 `setxkbmap fr mac` instead of `setxkbmap fr`
+
 And in ~/arch-installer/airootfs/root/arch-eric-setup.sh comment:
 
 `packages+=' virtualbox-guest-utils virtualbox-guest-modules-arch' `
