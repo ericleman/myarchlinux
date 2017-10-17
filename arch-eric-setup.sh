@@ -99,7 +99,7 @@ configure() {
   # LightDM
   packages+=' lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings'
   # Network
-  packages+=' avahi glib-networking networkmanager networkmanager-dispatcher-ntpd network-manager-applet wireless_tools wpa_actiond wpa_supplicant broadcom-wl-dkms'
+  packages+=' avahi glib-networking networkmanager networkmanager-dispatcher-ntpd network-manager-applet wireless_tools wpa_actiond wpa_supplicant'
 
   ## Je split pacman -Syy en 2 fois pour éviter que des liens se perdent pendant la synchro qui peut durer 20 min
   #echo "Package lists: $packages"
