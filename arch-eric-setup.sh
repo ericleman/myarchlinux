@@ -248,6 +248,11 @@ configure() {
   chmod 644 /home/eric/.gtkrc-2.0
   cp /scripts/gtk2 /home/root/.gtkrc-2.0
 
+  su eric -c "mkdir -p /home/eric/.config/volumeicon"
+  cp /scripts/volumeicon /home/eric/.config/volumeicon/volumeicon
+  chown eric /home/eric/.config/volumeicon/volumeicon
+  chmod 644 /home/eric/.config/volumeicon/volumeicon
+
   su eric -c "mkdir -p /home/eric/.config/skippy-xd"
   cp /scripts/skippy-xd.rc /home/eric/.config/skippy-xd/skippy-xd.rc
   chown eric /home/eric/.config/skippy-xd/skippy-xd.rc
