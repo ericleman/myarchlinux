@@ -2,8 +2,6 @@
 /home/eric/.fehbg &
 compton --config /home/eric/.config/compton.conf -b &
 
-# meta key opens rofi
-xcape -e 'Super_L=Alt_L|F1' &
 lxpolkit & #polkit (password popup)
 
 tint2 &
