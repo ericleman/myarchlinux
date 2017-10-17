@@ -93,7 +93,7 @@ configure() {
   # XFCE4
   packages+=' xfce4-settings xfce4-power-manager xfce4-notifyd'
   # OpenBox
-  packages+=' openbox obconf oblogout lxappearance lxappearance-obconf rofi tint2 screenfetch feh compton volumeicon xcape hardinfo catfish baobab'
+  packages+=' openbox obconf oblogout lxappearance lxappearance-obconf rofi tint2 screenfetch feh compton volumeicon hardinfo catfish baobab'
   # Themes
   packages+=' arc-gtk-theme arc-icon-theme' 
   # LightDM
