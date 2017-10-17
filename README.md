@@ -21,6 +21,9 @@ If the ISO is for a Macbook, then in ~/arch-installer/airootfs/root/arch-eric-se
 And comment this one:
 
 `echo 'KEYMAP="fr-pc"' >> /etc/vconsole.conf`
+And in ~/arch-installer/airootfs/root/scripts/xprofile, put:
+
+`setxkbmap fr mac` instead of `setxkbmap fr`
 
 
 In ~/arch-installer/airootfs/root/arch-eric-setup.sh, change mypassword to the password to use for user and root. 
