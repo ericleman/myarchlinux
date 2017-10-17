@@ -1,0 +1,53 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+  <icon>utilities-terminal</icon>
+  <name>Open Terminal Here</name>
+  <unique-id>1508150681354955-1</unique-id>
+  <command>termite -d %f</command>
+  <description>Example for a custom action</description>
+  <patterns>*</patterns>
+  <startup-notify/>
+  <directories/>
+</action>
+<action>
+  <icon>preferences-system-search</icon>
+  <name>Search...</name>
+  <unique-id>1508158348193913-1</unique-id>
+  <command>catfish --path=%f</command>
+  <description>Search...</description>
+  <patterns>*</patterns>
+  <directories/>
+</action>
+<action>
+  <icon>system-file-manager-symbolic</icon>
+  <name>Explore as root</name>
+  <unique-id>1508222424858563-1</unique-id>
+  <command>gksu thunar %f</command>
+  <description>Explore as root</description>
+  <patterns>*</patterns>
+  <directories/>
+</action>
+<action>
+  <icon></icon>
+  <name>Delete folder as root</name>
+  <unique-id>1508222545606873-3</unique-id>
+  <command>sudo rm -rf %f</command>
+  <description>Delete folder as root</description>
+  <patterns>*</patterns>
+  <directories/>
+</action>
+<action>
+  <icon></icon>
+  <name>Delete file as root</name>
+  <unique-id>1508222587928264-4</unique-id>
+  <command>sudo rm %f</command>
+  <description>Delete file as root</description>
+  <patterns>*</patterns>
+  <audio-files/>
+  <image-files/>
+  <other-files/>
+  <text-files/>
+  <video-files/>
+</action>
+</actions>

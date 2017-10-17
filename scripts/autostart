@@ -1,0 +1,19 @@
+#nitrogen --restore & #restore the background chosen with nitrogen  
+/home/eric/.fehbg &
+compton --config /home/eric/.config/compton.conf -b &
+
+# meta key opens rofi
+xcape -e 'Super_L=Alt_L|F1' &
+lxpolkit & #polkit (password popup)
+
+tint2 &
+thunar --daemon &
+volumeicon &
+xfce4-power-manager &
+nm-applet &
+
+skippy-xd --config $HOME/.config/skippy-xd/skippy-xd.rc --start-daemon &
+xfce4-power-manager &
+xfce4-notifyd &
+kalu &
+xrdb -load /home/eric/.XResources &
