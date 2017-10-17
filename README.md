@@ -9,6 +9,7 @@ On an existing archlinux environment, install archiso
 
 get the git files to ~/arch-installer/airootfs/root/
 
+## Macbook:
 If the ISO is for a Macbook, then in ~/arch-installer/airootfs/root/arch-eric-setup.sh, uncomment these lines:
 
 `#create_mac_kmap`
@@ -24,9 +25,12 @@ And comment this one:
 And in ~/arch-installer/airootfs/root/scripts/xprofile, put:
 
 `setxkbmap fr mac` instead of `setxkbmap fr`
+And in ~/arch-installer/airootfs/root/arch-eric-setup.sh comment:
 
+`packages+=' virtualbox-guest-utils virtualbox-guest-modules-arch' `
 
-In ~/arch-installer/airootfs/root/arch-eric-setup.sh, change mypassword to the password to use for user and root. 
+## Then:
+In ~/arch-installer/airootfs/root/arch-eric-setup.sh, change `mypassword` to the password to use for user and root. 
 
 In ~/arch-installer/efiboot/loader/entries/ change archiso-x86_64-cd.conf and archiso-x86_64-usb.conf so the last line contains the name of the script arch-eric-setup.sh:
 options archisobasedir=%INSTALL_DIR% archisolabel=%ARCHISO_LABEL% script=arch-eric-setup.sh
