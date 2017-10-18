@@ -106,6 +106,7 @@ our $SCHEMA = [
       {beg => ['Openbox', 'openbox']},
         {item => ["$editor ~/.config/openbox/autostart", 'Openbox Autostart',   'text-x-generic']},
         {item => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-x-generic']},
+        {item => ['obkey',  'Openbox Key Shortcut',        'text-x-generic']},
         {item => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-x-generic']},
         {item => ['openbox --reconfigure',               'Reconfigure Openbox', 'openbox']},
       {end => undef},
