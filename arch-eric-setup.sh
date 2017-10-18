@@ -241,13 +241,13 @@ configure() {
   cp /scripts/gtk3 /home/eric/.config/gtk-3.0/settings.ini
   chown eric /home/eric/.config/gtk-3.0/settings.ini
   chmod 644 /home/eric/.config/gtk-3.0/settings.ini
-  mkdir -p /home/root/.config/gtk-3.0
-  cp /scripts/gtk3 /home/root/.config/gtk-3.0/settings.ini
+  mkdir -p /root/.config/gtk-3.0
+  cp /scripts/gtk3 /root/.config/gtk-3.0/settings.ini
 
   cp /scripts/gtk2 /home/eric/.gtkrc-2.0
   chown eric /home/eric/.gtkrc-2.0
   chmod 644 /home/eric/.gtkrc-2.0
-  cp /scripts/gtk2 /home/root/.gtkrc-2.0
+  cp /scripts/gtk2 /root/.gtkrc-2.0
 
   su eric -c "mkdir -p /home/eric/.config/volumeicon"
   cp /scripts/volumeicon /home/eric/.config/volumeicon/volumeicon
