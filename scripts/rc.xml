@@ -293,11 +293,6 @@
         <command>scrot -d 5 'ArchLabs_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; gpicview $$(xdg-user-dir PICTURES)/$f'</command>
       </action>
     </keybind>
-    <keybind key="A-F1">
-      <action name="Execute">
-        <command>rofi -modi run,drun,window -lines 12 -width 70 -location 2 -show drun -sidebar-mode -columns 2 -font "Ubuntu Light 10"</command>
-      </action>
-    </keybind>
     <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
