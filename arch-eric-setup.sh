@@ -309,10 +309,13 @@ configure() {
   sed -i 's%padding.height: 4%padding.height: 1%g' /usr/share/themes/Arc-Dark/openbox-3/themerc
 
   mkdir /usr/share/backgrounds
-  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/NOFQh9F-arch-linux-wallpaper.png
-  cp /scripts/fehbg /home/eric/.fehbg
-  chown eric /home/eric/.fehbg
-  chmod 744 /home/eric/.fehbg
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/0.png
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/1.png
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/2.png
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/3.png
+  cp /scripts/switchbg.py /home/eric/.config/switchbg.py
+  chown eric /home/eric/.config/switchbg.py
+  chmod 744 /home/eric/.config/switchbg.py
 
   rm /arch-eric-setup.sh
 }
