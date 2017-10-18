@@ -1,5 +1,5 @@
 #nitrogen --restore & #restore the background chosen with nitrogen  
-#/home/eric/.fehbg &
+/home/eric/.fehbg &
 compton --config /home/eric/.config/compton.conf -b &
 
 lxpolkit & #polkit (password popup)
@@ -15,4 +15,3 @@ xfce4-power-manager &
 xfce4-notifyd &
 kalu &
 xrdb -load /home/eric/.XResources &
-(sleep 2s && python /home/eric/.config/switchbg.py /usr/share/backgrounds/ 0.2) &
