@@ -164,6 +164,7 @@ configure() {
   su eric -c "yaourt -S --noconfirm i3lock-fancy-git"
   su eric -c "yaourt -S --noconfirm kazam"
   su eric -c "yaourt -S --noconfirm kalu"
+  su eric -c "yaourt -S --noconfirm obkey-git"
   # su eric -c "yaourt -S --noconfirm pamac-aur"
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
   # su eric -c "yaourt -S --noconfirm broadcom-wl"
