@@ -3,7 +3,7 @@
 compton --config /home/eric/.config/compton.conf -b &
 
 lxpolkit & #polkit (password popup)
-
+#xcape -e 'Super_L=Alt_L|F1' &
 tint2 &
 thunar --daemon &
 volumeicon &
