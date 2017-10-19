@@ -310,6 +310,10 @@ configure() {
 
   mkdir /usr/share/backgrounds
   cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/NOFQh9F-arch-linux-wallpaper.png
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/SIoLm5X.png
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/e3ds1gR.jpg
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/hfcCKRj.jpg
+  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/yskbiPT.jpg
   cp /scripts/fehbg /home/eric/.fehbg
   chown eric /home/eric/.fehbg
   chmod 744 /home/eric/.fehbg
