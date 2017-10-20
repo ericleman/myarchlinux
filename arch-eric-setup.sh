@@ -140,13 +140,13 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Setting root password'
-  echo -en "fnVfKv\nfnVfKv" | passwd
+  echo -en "mypassword\nmypassword" | passwd
 
   echo '************************************************'
   echo '************************************************'
   echo '**************** Creating initial user'
   useradd -m -s /bin/bash -G adm,systemd-journal,wheel,rfkill,games,network,video,audio,optical,floppy,storage,scanner,power -c "Eric" eric
-  echo -en "fnVfKv\nfnVfKv" | passwd "eric"
+  echo -en "mypassword\nmypassword" | passwd "eric"
 
   echo '************************************************'
   echo '************************************************'
