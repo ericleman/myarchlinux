@@ -93,7 +93,7 @@ configure() {
   # XFCE4
   packages+=' xfce4-settings xfce4-power-manager xfce4-notifyd'
   # OpenBox
-  packages+=' openbox obconf oblogout lxappearance lxappearance-obconf rofi tint2 screenfetch feh compton volumeicon hardinfo catfish baobab'
+  packages+=' openbox obconf oblogout lxappearance lxappearance-obconf tint2 screenfetch feh compton volumeicon hardinfo catfish baobab'
   # Themes
   packages+=' arc-gtk-theme arc-icon-theme' 
   # LightDM
@@ -154,7 +154,8 @@ configure() {
   
   su eric -c "yaourt -S --noconfirm openbox-arc-git"
   su eric -c "yaourt -S --noconfirm obmenu-generator"
-  su eric -c "yaourt -S --noconfirm skippy-xd-git"
+  su eric -c "yaourt -S --noconfirm xfdashboard"
+  # su eric -c "yaourt -S --noconfirm skippy-xd-git"
   # su eric -c "yaourt -S --noconfirm networkmanager-dmenu-git"
   # su eric -c "yaourt -S --noconfirm papirus-icon-theme-git"
   # su eric -c "yaourt -S --noconfirm mkinitcpio-openswap"
@@ -254,11 +255,6 @@ configure() {
   chown eric /home/eric/.config/volumeicon/volumeicon
   chmod 644 /home/eric/.config/volumeicon/volumeicon
 
-  su eric -c "mkdir -p /home/eric/.config/skippy-xd"
-  cp /scripts/skippy-xd.rc /home/eric/.config/skippy-xd/skippy-xd.rc
-  chown eric /home/eric/.config/skippy-xd/skippy-xd.rc
-  chmod 644 /home/eric/.config/skippy-xd/skippy-xd.rc
-
   su eric -c "mkdir -p /home/eric/.config/Thunar"
   cp /scripts/uca.xml /home/eric/.config/Thunar/uca.xml
   chown eric /home/eric/.config/Thunar/uca.xml
@@ -267,10 +263,6 @@ configure() {
   cp /scripts/xprofile /home/eric/.xprofile
   chown eric /home/eric/.xprofile
   chmod 644 /home/eric/.xprofile
-
-  cp /scripts/XResources /home/eric/.XResources
-  chown eric /home/eric/.XResources
-  chmod 644 /home/eric/.XResources
 
   cp /scripts/compton.conf /home/eric/.config/compton.conf
   chown eric /home/eric/.config/compton.conf
@@ -317,6 +309,11 @@ configure() {
   cp /scripts/fehbg /home/eric/.fehbg
   chown eric /home/eric/.fehbg
   chmod 744 /home/eric/.fehbg
+  
+  su eric -c "xfconf-query -c xfdashboard -p /components/windows-view/scroll-event-changes-workspace -s true"
+  su eric -c "xfconf-query -c xfdashboard -p /theme -s xfdashboard-dark"
+  su eric -c "xfconf-query -c xfdashboard -p /always-launch-new-instance -s false"
+
 
   rm /arch-eric-setup.sh
 }
