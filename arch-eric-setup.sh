@@ -310,9 +310,9 @@ configure() {
   chown eric /home/eric/.fehbg
   chmod 744 /home/eric/.fehbg
   
-  su eric -c "xfconf-query -c xfdashboard -p /components/windows-view/scroll-event-changes-workspace -s true"
-  su eric -c "xfconf-query -c xfdashboard -p /theme -s xfdashboard-dark"
-  su eric -c "xfconf-query -c xfdashboard -p /always-launch-new-instance -s false"
+  su eric -c "xfconf-query -c xfdashboard -p /components/windows-view/scroll-event-changes-workspace -n -t bool -s true"
+  su eric -c "xfconf-query -c xfdashboard -p /theme -n -t string -s xfdashboard-dark"
+  su eric -c "xfconf-query -c xfdashboard -p /always-launch-new-instance -n -t bool -s false"
 
 
   rm /arch-eric-setup.sh
