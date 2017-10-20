@@ -572,16 +572,6 @@ End of Tiling Binds
           <to>next</to>
         </action>
       </mousebind>
-      <mousebind action="Click" button="W-S-Up">
-        <action name="SendToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind action="Click" button="W-S-Down">
-        <action name="SendToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
     </context>
     <context name="Titlebar">
       <mousebind action="Press" button="Left">
@@ -836,6 +826,16 @@ End of Tiling Binds
       </mousebind>
       <mousebind action="Click" button="W-Down">
         <action name="GoToDesktop">
+          <to>next</to>
+        </action>
+      </mousebind>
+      <mousebind action="Click" button="W-S-Up">
+        <action name="SendToDesktop">
+          <to>previous</to>
+        </action>
+      </mousebind>
+      <mousebind action="Click" button="W-S-Down">
+        <action name="SendToDesktop">
           <to>next</to>
         </action>
       </mousebind>
