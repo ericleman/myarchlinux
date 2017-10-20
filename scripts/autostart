@@ -10,8 +10,7 @@ volumeicon &
 xfce4-power-manager &
 nm-applet &
 
-skippy-xd --config $HOME/.config/skippy-xd/skippy-xd.rc --start-daemon &
+xfdashboard --daemon
 xfce4-power-manager &
 xfce4-notifyd &
 kalu &
-xrdb -load /home/eric/.XResources &
