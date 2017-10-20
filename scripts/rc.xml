@@ -356,14 +356,10 @@
         <menu>client-list-combined-menu</menu>
       </action>
     </keybind>
-    <keybind key="W-s">
-      <action name="Execute">
-        <command>skippy-xd</command>
-      </action>
-    </keybind>
     <keybind key="C-space">
       <action name="Execute">
-        <command>rofi -modi run,drun,window -lines 12 -width 70 -location 2 -show drun -sidebar-mode -columns 2 -font "Ubuntu Light 10"</command>
+        <!--command>rofi -modi run,drun,window -lines 12 -width 70 -location 2 -show drun -sidebar-mode -columns 2 -font "Ubuntu Light 10"</command-->
+        <command>xfdashboard</command>
       </action>
     </keybind>
     <keybind key="W-space">
