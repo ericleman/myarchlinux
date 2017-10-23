@@ -270,6 +270,7 @@ configure() {
 
   cp /scripts/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
   cp /scripts/pamac.conf /etc/pamac.conf
+  cp /scripts/49-nopasswd_global.rules /etc/polkit-1/rules.d/49-nopasswd_global.rules
 
   cp /scripts/oblogout.conf /etc/oblogout.conf
   mkdir /usr/share/themes/AL-adeos-branco-mono/
