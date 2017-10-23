@@ -13,4 +13,5 @@ nm-applet &
 xfdashboard --daemon
 xfce4-power-manager &
 xfce4-notifyd &
-kalu &
+# kalu &
+pamac-tray &
