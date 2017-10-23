@@ -488,24 +488,6 @@ Beginning of tile binds
       </action>
       <action name="MoveToCenter"/>
     </keybind>
-    <keybind key="W-A-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-      </action>
-    </keybind>
-    <keybind key="W-A-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>0</y>
-        <width>50%</width>
-      </action>
-    </keybind>
     <!--
 End of Tiling Binds
  -->
