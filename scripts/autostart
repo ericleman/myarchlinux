@@ -14,4 +14,4 @@ xfdashboard --daemon
 xfce4-power-manager &
 xfce4-notifyd &
 # kalu &
-pamac-tray &
+(sleep 2; pamac-tray) &
