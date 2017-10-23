@@ -122,7 +122,7 @@ configure() {
   # Yaourt
   packages+=' yaourt'
   # Wine
-  packages+=' wine lib32-libpulse' # lib32-libpulse for sound with PulseAudio
+  packages+=' winetricks lib32-libpulse' # lib32-libpulse for sound with PulseAudio
   # For laptops
   packages+=' xf86-input-libinput xf86-input-keyboard xf86-input-mouse'
   #packages+=' xf86-input-synaptics' # is synaptics better than libinput?
