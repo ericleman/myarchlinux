@@ -190,10 +190,7 @@
       <action name="DesktopRight"/>
     </keybind>
     <keybind key="W-A-Left">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
+      <action name="DesktopLeft"/>
     </keybind>
     <keybind key="W-A-Up">
       <action name="GoToDesktop">
