@@ -269,6 +269,7 @@ configure() {
   chmod 644 /home/eric/.config/compton.conf
 
   cp /scripts/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+  cp /scripts/pamac.conf /etc/pamac.conf
 
   cp /scripts/oblogout.conf /etc/oblogout.conf
   mkdir /usr/share/themes/AL-adeos-branco-mono/
