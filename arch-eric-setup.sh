@@ -162,6 +162,7 @@ configure() {
   # su eric -c "yaourt -S --noconfirm pacli"
   # su eric -c "yaourt -S --noconfirm pamac-tray-appindicator"
   # su eric -c "yaourt -S --noconfirm ksuperkey"
+  su eric -c "yaourt -S --noconfirm libinput-gestures"
   su eric -c "yaourt -S --noconfirm i3lock-fancy-git"
   su eric -c "yaourt -S --noconfirm kazam"
   # su eric -c "yaourt -S --noconfirm kalu"
@@ -270,6 +271,7 @@ configure() {
 
   cp /scripts/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
   cp /scripts/pamac.conf /etc/pamac.conf
+  cp /scripts/libinput-gestures.conf /etc/libinput-gestures.conf
   cp /scripts/49-nopasswd_global.rules /etc/polkit-1/rules.d/49-nopasswd_global.rules
 
   cp /scripts/oblogout.conf /etc/oblogout.conf
@@ -315,7 +317,7 @@ configure() {
   su eric -c "xfconf-query -c xfdashboard -p /components/windows-view/scroll-event-changes-workspace -n -t bool -s true"
   su eric -c "xfconf-query -c xfdashboard -p /theme -n -t string -s xfdashboard-dark"
   su eric -c "xfconf-query -c xfdashboard -p /always-launch-new-instance -n -t bool -s false"
-
+  su eric -c "libinput-gestures-setup autostart"
 
   rm /arch-eric-setup.sh
 }
