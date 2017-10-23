@@ -93,7 +93,7 @@ configure() {
   # XFCE4
   packages+=' xfce4-settings xfce4-power-manager xfce4-notifyd'
   # OpenBox
-  packages+=' openbox obconf oblogout lxappearance lxappearance-obconf tint2 screenfetch feh compton volumeicon hardinfo catfish baobab'
+  packages+=' openbox obconf oblogout lxappearance lxappearance-obconf tint2 screenfetch feh compton volumeicon hardinfo catfish baobab simplescreenrecorder'
   # Themes
   packages+=' arc-gtk-theme arc-icon-theme' 
   # LightDM
@@ -164,7 +164,7 @@ configure() {
   # su eric -c "yaourt -S --noconfirm ksuperkey"
   su eric -c "yaourt -S --noconfirm libinput-gestures"
   su eric -c "yaourt -S --noconfirm i3lock-fancy-git"
-  su eric -c "yaourt -S --noconfirm kazam"
+  # su eric -c "yaourt -S --noconfirm kazam"
   # su eric -c "yaourt -S --noconfirm kalu"
   su eric -c "yaourt -S --noconfirm obkey-git"
   su eric -c "yaourt -S --noconfirm pamac-aur"
