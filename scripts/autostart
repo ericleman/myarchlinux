@@ -10,7 +10,7 @@ volumeicon &
 xfce4-power-manager &
 nm-applet &
 
-xfdashboard --daemon
+xfdashboard -d &
 xfce4-power-manager &
 xfce4-notifyd &
 # kalu &
