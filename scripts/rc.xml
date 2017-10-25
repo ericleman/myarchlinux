@@ -512,19 +512,16 @@ End of Tiling Binds
       <mousebind action="Click" button="A-Left">
         <action name="Unshade"/>
       </mousebind>
-      <mousebind action="Drag" button="A-Left">
-        <action name="Move"/>
-      </mousebind>
       <mousebind action="Press" button="A-Right">
         <action name="Focus"/>
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind action="Drag" button="A-Right">
-        <action name="Resize"/>
-      </mousebind>
       <mousebind action="Drag" button="W-Left">
         <action name="Resize"/>
+      </mousebind>
+      <mousebind action="Drag" button="W-Right">
+        <action name="Move"/>
       </mousebind>
       <mousebind action="Press" button="A-Middle">
         <action name="Lower"/>
@@ -548,16 +545,6 @@ End of Tiling Binds
       </mousebind>
       <mousebind action="Click" button="C-A-Down">
         <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind action="Click" button="W-S-Up">
-        <action name="SendToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind action="Click" button="W-S-Down">
-        <action name="SendToDesktop">
           <to>next</to>
         </action>
       </mousebind>
@@ -815,6 +802,16 @@ End of Tiling Binds
       </mousebind>
       <mousebind action="Click" button="W-Down">
         <action name="GoToDesktop">
+          <to>next</to>
+        </action>
+      </mousebind>
+      <mousebind action="Click" button="W-S-Up">
+        <action name="SendToDesktop">
+          <to>previous</to>
+        </action>
+      </mousebind>
+      <mousebind action="Click" button="W-S-Down">
+        <action name="SendToDesktop">
           <to>next</to>
         </action>
       </mousebind>
