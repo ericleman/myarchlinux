@@ -163,7 +163,7 @@ configure() {
   # su eric -c "yaourt -S --noconfirm mkinitcpio-openswap"
   # su eric -c "yaourt -S --noconfirm pacli"
   # su eric -c "yaourt -S --noconfirm pamac-tray-appindicator"
-  # su eric -c "yaourt -S --noconfirm ksuperkey"
+  su eric -c "yaourt -S --noconfirm sqlectron-gui"
   su eric -c "yaourt -S --noconfirm libinput-gestures"
   su eric -c "yaourt -S --noconfirm i3lock-fancy-git"
   # su eric -c "yaourt -S --noconfirm kazam"
