@@ -114,7 +114,7 @@ configure() {
   # Applications
   packages+=' audacious audacious-plugins galculator gparted gpicview gsimplecal gnome-system-monitor gnome-disk-utility'
   # Applications
-  packages+=' chromium pepper-flash vlc qt4'
+  packages+=' chromium pepper-flash vlc qt4 sqlitebrowser'
   # Utilities
   packages+=' arandr termite dialog gksu htop imagemagick intltool libmpdclient lm_sensors lsb-release numlockx p7zip playerctl polkit lxsession sudo pygobject-devel python-docopt python2-gobject2 python2-dbus python2-lxml python2-xdg scrot unrar unzip wmctrl w3m'
   # Java stuff
