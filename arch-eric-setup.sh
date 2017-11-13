@@ -77,7 +77,7 @@ configure() {
   echo '[archlinuxfr]' >> /etc/pacman.conf
   echo 'SigLevel = Never ' >> /etc/pacman.conf
   echo 'Server = http://repo.archlinux.fr/$arch ' >> /etc/pacman.conf
-  echo 'IgnorePkg = postgresql postgresql-libs ' >> /etc/pacman.conf
+  sed -i 's%#IgnorePkg   =%IgnorePkg = postgresql postgresql-libs %g' /etc/pacman.conf
 
   local packages=''
 
