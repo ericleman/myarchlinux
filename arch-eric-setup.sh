@@ -85,6 +85,8 @@ configure() {
   packages+=' xorg-apps xorg-server xorg-xinit xorg-drivers' 
   # QT5
   packages+=' qt5-base qt5-webkit python-pyqt5 pyqt5-common'
+  # C++ Boost
+  packages+=' boost boost-libs cmake'
   # VirtualBox
   packages+=' virtualbox-guest-utils virtualbox-guest-modules-arch' 
   # General utilities/libraries
