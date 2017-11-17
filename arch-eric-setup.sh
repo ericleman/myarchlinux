@@ -84,7 +84,7 @@ configure() {
   # Xserver
   packages+=' xorg-apps xorg-server xorg-xinit xorg-drivers' 
   # Python
-  packages+=' python-pyside python-pyparsing'
+  packages+=' python-pyside python-pyparsing cython'
   # C++ Boost
   packages+=' boost boost-libs cmake'
   # VirtualBox
