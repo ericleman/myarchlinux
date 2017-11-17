@@ -83,8 +83,8 @@ configure() {
 
   # Xserver
   packages+=' xorg-apps xorg-server xorg-xinit xorg-drivers' 
-  # QT5
-  packages+=' qt5-base qt5-webkit python-pyqt5 pyqt5-common'
+  # QT
+  packages+=' python-pyside'
   # C++ Boost
   packages+=' boost boost-libs cmake'
   # VirtualBox
@@ -174,7 +174,7 @@ configure() {
   su eric -c "yaourt -S --noconfirm obkey-git"
   su eric -c "yaourt -S --noconfirm pamac-aur"
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
-  # su eric -c "yaourt -S --noconfirm broadcom-wl"
+  su eric -c "yaourt -S --noconfirm pokerstove-git"
 
   echo '************************************************'
   echo '************************************************'
