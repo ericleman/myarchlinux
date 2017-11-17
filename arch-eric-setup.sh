@@ -174,7 +174,7 @@ configure() {
   su eric -c "yaourt -S --noconfirm obkey-git"
   su eric -c "yaourt -S --noconfirm pamac-aur"
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
-  su eric -c "yaourt -S --noconfirm pokerstove-git"
+  # su eric -c "yaourt -S --noconfirm pokerstove-git"
 
   echo '************************************************'
   echo '************************************************'
