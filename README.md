@@ -9,7 +9,9 @@ On an existing archlinux environment, install archiso
 
 `git clone https://github.com/ericleman/myarchlinux.git`
 
+`cp -a myarchlinux/. .`
 
+`rm -rf myarchlinux`
 
 ## Macbook:
 If the ISO is for a Macbook, then in ~/arch-installer/airootfs/root/arch-eric-setup.sh, uncomment these lines:
