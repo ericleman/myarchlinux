@@ -229,7 +229,7 @@ configure() {
   echo '**************** Configure OpenBox'
   cp /scripts/bashrc /home/eric/.bashrc
   chown eric /home/eric/.bashrc
-  chmod 644 /home/eric/.bashshrc
+  chmod 644 /home/eric/.bashrc
 
   su eric -c "mkdir -p /home/eric/.config/termite"
   cp /scripts/termite /home/eric/.config/termite/config
