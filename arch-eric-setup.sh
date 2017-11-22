@@ -206,6 +206,10 @@ configure() {
 
   cp /scripts/pamac.conf /etc/pamac.conf
   
+  cp /scripts/xprofile /home/eric/.xprofile
+  chown eric /home/eric/.xprofile
+  chmod 644 /home/eric/.xprofile
+
   cat > /home/eric/gsettings.sh <<EOF  
 gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Arc'
