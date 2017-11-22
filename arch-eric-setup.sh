@@ -200,7 +200,10 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Configure Misc'
-  create_bashrc
+  cp /scripts/bashrc /home/eric/.bashrc
+  chown eric /home/eric/.bashrc
+  chmod 644 /home/eric/.bashrc
+
   cat > /home/eric/gsettings.sh <<EOF  
 gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Arc'
@@ -223,18 +226,6 @@ EOF
 
   # su eric -c "/home/eric/gsettings.sh"
   rm /arch-eric-setup.sh
-}
-
-create_bashrc() {
-  cat > /home/eric/.bashrc <<EOF
-[[ \$- != *i* ]] && return
-
-alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
-neofetch
-EOF
-  chown eric /home/eric/.bashrc
-  chmod 644 /home/eric/.bashrc
 }
 
 create_mac_kmap() {
