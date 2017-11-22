@@ -81,8 +81,15 @@ configure() {
 
   local packages=''
 
-  # Xserver
-  packages+=' xorg-apps xorg-server xorg-xinit xorg-drivers' 
+
+  # Wayland
+  packages+=' wayland' 
+  # Yaourt
+  packages+=' yaourt'
+  # Postgresql
+  packages+=' postgresql'
+  # Wine
+  packages+=' winetricks lib32-libpulse lib32-gnutls wine lib32-libldap lib32-mpg123'
   # Python
   packages+=' python-pyside python-pyparsing cython'
   # C++ Boost
@@ -90,47 +97,26 @@ configure() {
   # VirtualBox
   packages+=' virtualbox-guest-utils virtualbox-guest-modules-arch' 
   # General utilities/libraries
-  packages+=' arch-install-scripts acpi_call bash-completion btrfs-progs b43-fwcutter bluez-firmware clonezilla crda dialog dmraid dosfstools exfat-utils f2fs-tools fuse gpm gptfdisk grub grml-zsh-config hdparm jfsutils jsoncpp ipw2100-fw ipw2200-fw linux-atm mtools mlocate mkinitcpio-nfs-utils nfs-utils nilfs-utils ntfs-3g ntp openssh rsync parted partclone partimage refind-efi reflector reiserfsprogs rfkill rsync sdparm sudo squashfs-tools usb_modeswitch wget wireless-regdb xfsprogs zd1211-firmware'
-  # Audio and Codecs
-  packages+=' alsa-firmware alsa-plugins alsa-lib dcadec ffmpeg2.8 gst-libav gst-plugins-base gst-plugins-good gstreamer libdvbpsi libebml libmad libmatroska libtar libupnp pamixer pulseaudio pulseaudio-alsa pavucontrol'
+  packages+=' ntp wget cronie git tk'
+  # Gnome
+  packages+=' gnome gnome-extra'
+  #packages+=' gnome-shell baobab eog evince gdm gnome-calculator gnome-control-center gnome-disk-utility gnome-screenshot gnome-session gnome-settings-daemon gnome-shell-extenstion gnome-system-monitor gnome-terminal gnome-themes-standard  mousetweaks mutter nautilius  networkmanager sushi totem xdg-user-dirs-gtk gnome-weather gnome-calendar gnome-tweak-tool gnome-clocks gnome-characters'
+  #packages+=' gdm'
+  # Gnome includes gnome-shell and gnome-shell-extenstion but excludes gnome-weather and gnome-calendar and gnome-tweak-tool and gnome-clocks and gnome-characters
   # Libreoffice
   packages+=' libreoffice-fresh'
-  # XFCE4
-  packages+=' xfce4-settings xfce4-power-manager xfce4-notifyd'
-  # OpenBox
-  packages+=' openbox obconf oblogout lxappearance lxappearance-obconf tint2 screenfetch feh compton volumeicon hardinfo catfish baobab simplescreenrecorder'
   # Themes
-  packages+=' arc-gtk-theme arc-icon-theme' 
-  # LightDM
-  packages+=' lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings'
+  packages+=' arc-gtk-theme arc-icon-theme'
   # Network
-  packages+=' avahi glib-networking networkmanager networkmanager-dispatcher-ntpd network-manager-applet wireless_tools wpa_actiond wpa_supplicant'
-
-  ## Je split pacman -Syy en 2 fois pour éviter que des liens se perdent pendant la synchro qui peut durer 20 min
-  #echo "Package lists: $packages"
-  #sleep 5
-  #pacman -Syy --noconfirm $packages
-  #packages=''
-
-  # File management
-  packages+=' file-roller thunar tumbler xdg-user-dirs-gtk gvfs udisks2 udiskie'
+  # packages+=' broadcom-wl-dkms'
   # Applications
-  packages+=' audacious audacious-plugins galculator gparted gpicview gsimplecal gnome-system-monitor gnome-disk-utility'
-  # Applications
-  packages+=' chromium pepper-flash vlc qt4 sqlitebrowser'
-  # Utilities
-  packages+=' arandr termite dialog gksu htop imagemagick intltool libmpdclient lm_sensors lsb-release numlockx p7zip playerctl polkit lxsession sudo pygobject-devel python-docopt python2-gobject2 python2-dbus python2-lxml python2-xdg scrot unrar unzip wmctrl w3m'
+  packages+=' chromium pepper-flash vlc sqlitebrowser'
   # Java stuff
   packages+=' jre8-openjdk icedtea-web'
+  # General utilities/libraries
+  packages+=' arch-install-scripts acpi_call bash-completion btrfs-progs b43-fwcutter bluez-firmware clonezilla crda dialog dmraid dosfstools exfat-utils f2fs-tools fuse gpm gptfdisk grub grml-zsh-config hdparm jfsutils jsoncpp ipw2100-fw ipw2200-fw linux-atm mtools mlocate mkinitcpio-nfs-utils nfs-utils nilfs-utils ntfs-3g ntp openssh rsync parted partclone partimage refind-efi reflector reiserfsprogs rfkill rsync sdparm sudo squashfs-tools usb_modeswitch wget wireless-regdb xfsprogs zd1211-firmware screenfetch simplescreenrecorder'
   # Fonts
   packages+=' ttf-ubuntu-font-family ttf-roboto'
-  # Yaourt
-  packages+=' yaourt'
-  # Wine
-  packages+=' winetricks lib32-libpulse' # lib32-libpulse for sound with PulseAudio
-  # For laptops
-  packages+=' xf86-input-libinput xf86-input-keyboard xf86-input-mouse'
-  #packages+=' xf86-input-synaptics' # is synaptics better than libinput?
 
   echo "Package lists: $packages"
   sleep 5
@@ -157,24 +143,10 @@ configure() {
   echo '************************************************'
   echo '**************** Installing AUR packages'
   
-  su eric -c "yaourt -S --noconfirm openbox-arc-git"
-  su eric -c "yaourt -S --noconfirm obmenu-generator"
-  su eric -c "yaourt -S --noconfirm xfdashboard"
-  # su eric -c "yaourt -S --noconfirm skippy-xd-git"
-  # su eric -c "yaourt -S --noconfirm networkmanager-dmenu-git"
-  # su eric -c "yaourt -S --noconfirm papirus-icon-theme-git"
-  # su eric -c "yaourt -S --noconfirm mkinitcpio-openswap"
-  # su eric -c "yaourt -S --noconfirm pacli"
-  # su eric -c "yaourt -S --noconfirm pamac-tray-appindicator"
-  # su eric -c "yaourt -S --noconfirm sqlectron-gui"
-  su eric -c "yaourt -S --noconfirm libinput-gestures"
-  su eric -c "yaourt -S --noconfirm i3lock-fancy-git"
-  # su eric -c "yaourt -S --noconfirm kazam"
-  # su eric -c "yaourt -S --noconfirm kalu"
-  su eric -c "yaourt -S --noconfirm obkey-git"
-  su eric -c "yaourt -S --noconfirm pamac-aur"
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
-  # su eric -c "yaourt -S --noconfirm pokerstove-git"
+  su eric -c "yaourt -S --noconfirm gnome-shell-extension-topicons-plus"
+  su eric -c "yaourt -S --noconfirm pamac-aur"
+  su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast"
 
   echo '************************************************'
   echo '************************************************'
@@ -213,6 +185,7 @@ configure() {
   systemctl enable syslog-ng
   systemctl enable lightdm 
   systemctl enable ntpd 
+  systemctl enable gdm 
 
   echo '************************************************'
   echo '************************************************'
@@ -226,107 +199,43 @@ configure() {
 
   echo '************************************************'
   echo '************************************************'
-  echo '**************** Configure OpenBox'
-  cp /scripts/bashrc /home/eric/.bashrc
-  chown eric /home/eric/.bashrc
-  chmod 644 /home/eric/.bashshrc
+  echo '**************** Configure Misc'
+  create_bashrc
+  cat > /home/eric/gsettings.sh <<EOF  
+gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Arc'
+gsettings set org.gnome.shell.extensions.user-theme name 'Arc-Dark'
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'chromium.desktop', 'sublime-text.desktop']"
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr+mac')]"
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'gnome-terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>t'
+gsettings set org.gnome.shell enabled-extensions "['workspace-indicator@gnome-shell-extensions.gcampax.github.com','user-theme@gnome-shell-extensions.gcampax.github.com','alternate-tab@gnome-shell-extensions.gcampax.github.com', 'arch-update@RaphaelRochet', 'TopIcons@phocean.net', 'EasyScreenCast@iacopodeenosee.gmail.com']"
+gsettings set org.gnome.shell.extensions.topicons tray-pos 'right'
+EOF
+  chown eric /home/eric/gsettings.sh
+  chmod 700 /home/eric/gsettings.sh
 
-  su eric -c "mkdir -p /home/eric/.config/termite"
-  cp /scripts/termite /home/eric/.config/termite/config
-  chown eric /home/eric/.config/termite/config
-  chmod 644 /home/eric/.config/termite/config
-
-  su eric -c "cp -R /etc/xdg/openbox /home/eric/.config/"
-  cp /scripts/autostart /home/eric/.config/openbox/autostart
-  chown eric /home/eric/.config/openbox/autostart
-  chmod 644 /home/eric/.config/openbox/autostart
-  cp /scripts/rc.xml /home/eric/.config/openbox/rc.xml
-  chown eric /home/eric/.config/openbox/rc.xml
-  chmod 644 /home/eric/.config/openbox/rc.xml
-
-  su eric -c "mkdir -p /home/eric/.config/gtk-3.0"
-  cp /scripts/gtk3 /home/eric/.config/gtk-3.0/settings.ini
-  chown eric /home/eric/.config/gtk-3.0/settings.ini
-  chmod 644 /home/eric/.config/gtk-3.0/settings.ini
-  mkdir -p /root/.config/gtk-3.0
-  cp /scripts/gtk3 /root/.config/gtk-3.0/settings.ini
-
-  cp /scripts/gtk2 /home/eric/.gtkrc-2.0
-  chown eric /home/eric/.gtkrc-2.0
-  chmod 644 /home/eric/.gtkrc-2.0
-  cp /scripts/gtk2 /root/.gtkrc-2.0
-
-  su eric -c "mkdir -p /home/eric/.config/volumeicon"
-  cp /scripts/volumeicon /home/eric/.config/volumeicon/volumeicon
-  chown eric /home/eric/.config/volumeicon/volumeicon
-  chmod 644 /home/eric/.config/volumeicon/volumeicon
-
-  su eric -c "mkdir -p /home/eric/.config/Thunar"
-  cp /scripts/uca.xml /home/eric/.config/Thunar/uca.xml
-  chown eric /home/eric/.config/Thunar/uca.xml
-  chmod 644 /home/eric/.config/Thunar/uca.xml
-
-  cp /scripts/xprofile /home/eric/.xprofile
-  chown eric /home/eric/.xprofile
-  chmod 644 /home/eric/.xprofile
-
-  cp /scripts/compton.conf /home/eric/.config/compton.conf
-  chown eric /home/eric/.config/compton.conf
-  chmod 644 /home/eric/.config/compton.conf
-
-  cp /scripts/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
-  cp /scripts/pamac.conf /etc/pamac.conf
-  cp /scripts/libinput-gestures.conf /etc/libinput-gestures.conf
-  cp /scripts/49-nopasswd_global.rules /etc/polkit-1/rules.d/49-nopasswd_global.rules
-
-  cp /scripts/oblogout.conf /etc/oblogout.conf
-  mkdir /usr/share/themes/AL-adeos-branco-mono/
-  git clone https://github.com/ARCHLabs/Archlabs-Oblogout-Themes.git
-  cp -R Archlabs-Oblogout-Themes/adeos-branco-mono/oblogout/ /usr/share/themes/AL-adeos-branco-mono/
-  rm -rf /Archlabs-Oblogout-Themes
-
-
-  su eric -c "mkdir -p /home/eric/.config/obmenu-generator"
-  cp /scripts/obmenu-config.pl /home/eric/.config/obmenu-generator/config.pl
-  chown eric /home/eric/.config/obmenu-generator/config.pl
-  chmod 644 /home/eric/.config/obmenu-generator/config.pl
-  cp /scripts/obmenu-schema.pl /home/eric/.config/obmenu-generator/schema.pl
-  chown eric /home/eric/.config/obmenu-generator/schema.pl
-  chmod 644 /home/eric/.config/obmenu-generator/schema.pl
-  su eric -c "obmenu-generator -p"
-
-  su eric -c "mkdir -p /home/eric/.config/xfce4/xfconf/xfce-perchannel-xml"
-  cp /scripts/xfce4-power-manager.xml /home/eric/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
-  chown eric /home/eric/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
-  chmod 644 /home/eric/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
-
-  su eric -c "mkdir -p /home/eric/.config/tint2"
-  cp /scripts/tint2rc /home/eric/.config/tint2/tint2rc
-  chown eric /home/eric/.config/tint2/tint2rc
-  chmod 644 /home/eric/.config/tint2/tint2rc
-
-
-  sed -i 's%border.width: 1%border.width: 0%g' /usr/share/themes/Arc-Dark/openbox-3/themerc
-  sed -i 's%padding.height: 4%padding.height: 1%g' /usr/share/themes/Arc-Dark/openbox-3/themerc
-
-  mkdir /usr/share/backgrounds
-  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/NOFQh9F-arch-linux-wallpaper.png
-  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/SIoLm5X.png
-  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/e3ds1gR.jpg
-  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/hfcCKRj.jpg
-  cp /scripts/NOFQh9F-arch-linux-wallpaper.png /usr/share/backgrounds/yskbiPT.jpg
-  cp /scripts/fehbg /home/eric/.fehbg
-  chown eric /home/eric/.fehbg
-  chmod 744 /home/eric/.fehbg
-  
-  su eric -c "xfconf-query -c xfdashboard -p /components/windows-view/scroll-event-changes-workspace -n -t bool -s true"
-  su eric -c "xfconf-query -c xfdashboard -p /theme -n -t string -s xfdashboard-dark"
-  su eric -c "xfconf-query -c xfdashboard -p /always-launch-new-instance -n -t bool -s false"
-  su eric -c "libinput-gestures-setup autostart"
-
+  # su eric -c "/home/eric/gsettings.sh"
   rm /arch-eric-setup.sh
 }
 
+create_bashrc() {
+  cat > /home/eric/.bashrc <<EOF
+[[ \$- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+neofetch
+EOF
+  chown eric /home/eric/.bashrc
+  chmod 644 /home/eric/.bashrc
+}
 
 create_mac_kmap() {
     cat > /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.kmap <<EOF
