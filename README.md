@@ -3,7 +3,7 @@ On an existing archlinux environment, install archiso
 
 `sudo pacman -S archiso`
 
-`cp /usr/share/archiso/configs/releng ~/arch-installer`
+`cp -r /usr/share/archiso/configs/releng ~/arch-installer`
 
 `cd ~/arch-installer`
 
