@@ -48,3 +48,7 @@ In ~/arch-installer/, type
 
 After a while it will create an ISO in  ~/arch-installer/out/. This ISO can be used to install Archlinux.
 
+Once the ISO is installed on a new machine, just run this once the user is log in:
+`/home/eric/gsettings.sh`
+
+
