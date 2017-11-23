@@ -228,7 +228,7 @@ configure() {
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
   su eric -c "yaourt -S --noconfirm gnome-shell-extension-topicons-plus"
   su eric -c "yaourt -S --noconfirm pamac-aur"
-  su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast"
+  #su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast"
 
   echo '************************************************'
   echo '************************************************'
