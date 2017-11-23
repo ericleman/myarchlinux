@@ -132,7 +132,7 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Creating initial user'
-  useradd -m -s /bin/bash -G adm,systemd-journal,wheel,rfkill,games,network,video,audio,optical,floppy,storage,scanner,power,input -c "Eric" eric
+  useradd -m -s /bin/bash -G adm,systemd-journal,wheel,games,network,video,audio,optical,floppy,storage,scanner,power,input -c "Eric" eric
   echo -en "mypassword\nmypassword" | passwd "eric"
 
   echo '************************************************'
