@@ -295,7 +295,7 @@ configure() {
   cp /scripts/gsettings.sh /home/eric/gsettings.sh
   chown eric /home/eric/gsettings.sh
   chmod 700 /home/eric/gsettings.sh
-  su eric -c "/home/eric/gsettings.sh"
+  #su eric -c "/home/eric/gsettings.sh"
 
   rm /arch-eric-setup.sh
 }
