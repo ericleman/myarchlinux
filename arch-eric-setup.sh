@@ -36,7 +36,6 @@ setup() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Installing base system'
-  sleep 5
   cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup 
   sed -i 's%Server%#Server%g' /etc/pacman.d/mirrorlist
   sed -i 's%#Server = http://mir.archlinux.fr/$repo/os/$arch%Server = http://mir.archlinux.fr/$repo/os/$arch%g' /etc/pacman.d/mirrorlist
@@ -49,7 +48,6 @@ setup() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Chrooting into installed system to continue setup...'
-  sleep 5
   cp $0 /mnt/arch-eric-setup.sh
   cp -R ./scripts/ /mnt/
   arch-chroot /mnt ./arch-eric-setup.sh chroot
@@ -80,7 +78,6 @@ configure() {
   sed -i 's%#IgnorePkg   =%IgnorePkg = postgresql postgresql-libs %g' /etc/pacman.conf
 
   local packages=''
-
 
   # Wayland
   packages+=' wayland' 
@@ -121,6 +118,7 @@ configure() {
   echo "Package lists: $packages"
   sleep 5
   pacman -Syy --noconfirm $packages
+  sleep 5
 
   echo '************************************************'
   echo '************************************************'
