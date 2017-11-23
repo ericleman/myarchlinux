@@ -2,7 +2,9 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Arc'
 gsettings set org.gnome.shell.extensions.user-theme name 'Arc-Dark'
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'chromium.desktop', 'sublime-text.desktop']"
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr+mac')]"
+# for MacBook:
+#gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr+mac')]"
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr')]"
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
