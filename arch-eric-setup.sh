@@ -50,7 +50,7 @@ setup() {
   echo '**************** Chrooting into installed system to continue setup...'
   cp $0 /mnt/arch-eric-setup.sh
   cp -R ./scripts/ /mnt/
-  arch-chroot /mnt ./arch-eric-setup.sh chroot
+  arch-chroot /mnt ./arch-eric-setup.sh chroot | tee /mnt/install.log
 
   if [ -f /mnt/arch-eric-setup.sh ]
   then
@@ -83,8 +83,6 @@ configure() {
   packages+=' wayland' 
   # Yaourt
   packages+=' yaourt'
-  # Postgresql
-  packages+=' postgresql'
   # Wine
   packages+=' winetricks lib32-libpulse lib32-gnutls wine lib32-libldap lib32-mpg123'
   # Python
@@ -539,7 +537,7 @@ EOF
 
 if [ "$1" == "chroot" ]
 then
-    exec > install.log 2>&1
+    #exec > install.log 2>&1
     configure
 else
     setup
