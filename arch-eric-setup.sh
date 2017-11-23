@@ -109,7 +109,7 @@ configure() {
   # Java stuff
   packages+=' jre8-openjdk icedtea-web'
   # General utilities/libraries
-  packages+=' arch-install-scripts acpi_call bash-completion btrfs-progs b43-fwcutter bluez-firmware clonezilla crda dialog dmraid dosfstools exfat-utils f2fs-tools fuse gpm gptfdisk grub grml-zsh-config hdparm jfsutils jsoncpp ipw2100-fw ipw2200-fw linux-atm mtools mlocate mkinitcpio-nfs-utils nfs-utils nilfs-utils ntfs-3g ntp openssh rsync parted partclone partimage refind-efi reflector reiserfsprogs rfkill rsync sdparm sudo squashfs-tools usb_modeswitch wget wireless-regdb xfsprogs zd1211-firmware screenfetch simplescreenrecorder'
+  packages+=' arch-install-scripts acpi_call bash-completion btrfs-progs b43-fwcutter bluez-firmware clonezilla crda dialog dmraid dosfstools exfat-utils f2fs-tools fuse gpm gptfdisk grub grml-zsh-config hdparm jfsutils jsoncpp ipw2100-fw ipw2200-fw linux-atm mtools mlocate mkinitcpio-nfs-utils nfs-utils nilfs-utils ntfs-3g ntp openssh rsync parted partclone partimage refind-efi reflector reiserfsprogs rsync sdparm sudo squashfs-tools usb_modeswitch wget wireless-regdb xfsprogs zd1211-firmware screenfetch simplescreenrecorder'
   # Fonts
   packages+=' ttf-ubuntu-font-family ttf-roboto'
 
