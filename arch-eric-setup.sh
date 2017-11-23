@@ -176,8 +176,6 @@ configure() {
   package +=  ' tk'
   package +=  ' tracker'
   package +=  ' tracker-miners'
-  package +=  ' ttf-roboto'
-  package +=  ' ttf-ubuntu-font-family'
   package +=  ' usb_modeswitch'
   package +=  ' virtualbox-guest-modules-arch'
   package +=  ' virtualbox-guest-utils'
