@@ -541,7 +541,7 @@ EOF
 
 if [ "$1" == "chroot" ]
 then
-    exec 2>&1 | tee /install.log 
+    exec > install.log 2>&1
     configure
 else
     setup
