@@ -248,6 +248,7 @@ configure() {
   locale-gen
   echo 'LANG=en_US.UTF-8' >> /etc/locale.conf
   echo 'LC_TIME=en_DK.UTF-8' >> /etc/locale.conf
+  localectl --no-convert set-x11-keymap fr pc
 
   echo '************************************************'
   echo '************************************************'
