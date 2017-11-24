@@ -1,6 +1,7 @@
-gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
-gsettings set org.gnome.desktop.interface icon-theme 'Arc'
-gsettings set org.gnome.shell.extensions.user-theme name 'Arc-Dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Paper'
+gsettings set org.gnome.desktop.interface icon-theme 'Paper'
+gsettings set org.gnome.desktop.interface cursor-theme 'Paper'
+gsettings set org.gnome.shell.extensions.user-theme name 'Paper'
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'chromium.desktop', 'sublime_text_3.desktop']"
 # for MacBook:
 #gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr+mac')]"
