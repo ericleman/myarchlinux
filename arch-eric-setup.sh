@@ -80,9 +80,7 @@ configure() {
   local packages=''
   packages+=' acpi_call'
   packages+=' adwaita-icon-theme'
-  packages+=' arc-gtk-theme'
   packages+=' arch-install-scripts'
-  packages+=' arc-icon-theme'
   packages+=' b43-fwcutter'
   packages+=' baobab'
   packages+=' bash-completion'
@@ -228,6 +226,8 @@ configure() {
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
   su eric -c "yaourt -S --noconfirm gnome-shell-extension-topicons-plus"
   su eric -c "yaourt -S --noconfirm pamac-aur"
+  su eric -c "yaourt -S --noconfirm paper-icon-theme-git"
+  su eric -c "yaourt -S --noconfirm paper-gtk-theme-git"
   #su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast"
 
   echo '************************************************'
