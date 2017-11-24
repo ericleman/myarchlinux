@@ -50,7 +50,7 @@ setup() {
   echo '**************** Chrooting into installed system to continue setup...'
   cp $0 /mnt/arch-eric-setup.sh
   cp -R ./scripts/ /mnt/
-  arch-chroot /mnt ./arch-eric-setup.sh chroot | tee /mnt/install.log
+  arch-chroot /mnt ./arch-eric-setup.sh chroot
 
   if [ -f /mnt/arch-eric-setup.sh ]
   then
@@ -608,7 +608,7 @@ EOF
 if [ "$1" == "chroot" ]
 then
     #exec > install.log 2>&1
-    configure
+    configure 2>&1 | tee /mnt/install.log
 else
     setup
 fi
