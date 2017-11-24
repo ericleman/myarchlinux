@@ -266,7 +266,6 @@ configure() {
   sleep 5
   systemctl enable NetworkManager
   systemctl enable syslog-ng
-  systemctl enable lightdm 
   systemctl enable ntpd 
   systemctl enable gdm 
 
