@@ -17,4 +17,4 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 #gsettings set org.gnome.shell enabled-extensions "['workspace-indicator@gnome-shell-extensions.gcampax.github.com','user-theme@gnome-shell-extensions.gcampax.github.com','alternate-tab@gnome-shell-extensions.gcampax.github.com', 'TopIcons@phocean.net', 'EasyScreenCast@iacopodeenosee.gmail.com']"
 gsettings set org.gnome.shell enabled-extensions "['workspace-indicator@gnome-shell-extensions.gcampax.github.com','user-theme@gnome-shell-extensions.gcampax.github.com','alternate-tab@gnome-shell-extensions.gcampax.github.com', 'TopIcons@phocean.net']"
 gsettings set org.gnome.shell.extensions.topicons tray-pos 'right'
-
+gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
