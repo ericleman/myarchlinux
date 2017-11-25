@@ -50,7 +50,7 @@ setup() {
   echo '**************** Chrooting into installed system to continue setup...'
   cp $0 /mnt/arch-eric-setup.sh
   cp -R ./scripts/ /mnt/
-  arch-chroot /mnt ./arch-eric-setup.sh $1 chroot
+  arch-chroot /mnt ./arch-eric-setup.sh chroot $1
 
   if [ -f /mnt/arch-eric-setup.sh ]
   then
@@ -211,13 +211,13 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Setting root password'
-  echo -en "$1\n$1" | passwd
+  echo -en "$2\n$2" | passwd
 
   echo '************************************************'
   echo '************************************************'
   echo '**************** Creating initial user'
   useradd -m -s /bin/bash -G adm,systemd-journal,wheel,games,network,video,audio,optical,floppy,storage,scanner,power,input -c "Eric" eric
-  echo -en "$1\n$1" | passwd "eric"
+  echo -en "$2\n$2" | passwd "eric"
 
   echo '************************************************'
   echo '************************************************'
@@ -605,7 +605,7 @@ EOF
 }
 
 
-if [ "$2" == "chroot" ]
+if [ "$1" == "chroot" ]
 then
     #exec > install.log 2>&1
     configure 2>&1 | tee /mnt/install.log
