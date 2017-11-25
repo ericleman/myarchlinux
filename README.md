@@ -8,7 +8,7 @@ if Internet is no set:
 
 `wget https://github.com/ericleman/myarchlinux/tarball/master -O - | tar xz`
 
-`cd ericleman....`
+`cd ericleman*`
 
 `chmod 777 arch-eric-setup.sh`
 
