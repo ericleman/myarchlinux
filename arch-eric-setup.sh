@@ -211,13 +211,13 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Setting root password'
-  echo -en "$2\n$2" | passwd
+  echo -en "$1\n$1" | passwd
 
   echo '************************************************'
   echo '************************************************'
   echo '**************** Creating initial user'
   useradd -m -s /bin/bash -G adm,systemd-journal,wheel,games,network,video,audio,optical,floppy,storage,scanner,power,input -c "Eric" eric
-  echo -en "$2\n$2" | passwd "eric"
+  echo -en "$1\n$1" | passwd "eric"
 
   echo '************************************************'
   echo '************************************************'
