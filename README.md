@@ -3,6 +3,9 @@ From archlinux  ISO from archlinux.org:
 
 `loadkeys fr-pc` loqdkeys fr)pc
 
+if Internet is no set:
+`dhcpcd`
+
 `wget https://github.com/ericleman/archlinux/tarball/master -O - | tar xz`
 
 `cd ericleman....`
