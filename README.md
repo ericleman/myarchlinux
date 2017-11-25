@@ -6,7 +6,7 @@ From archlinux  ISO from archlinux.org:
 if Internet is no set:
 `dhcpcd`
 
-`wget https://github.com/ericleman/archlinux/tarball/master -O - | tar xz`
+`wget https://github.com/ericleman/myarchlinux/tarball/master -O - | tar xz`
 
 `cd ericleman....`
 
