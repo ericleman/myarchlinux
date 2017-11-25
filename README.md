@@ -1,4 +1,16 @@
 # myarchlinux
+`loadkeys fr-pc` loqdkeys fr)pc
+`wget https://github.com/ericleman/archlinux/tarball/master -O - | tar xz`
+`cd ericleman....`
+`chmod 777 arch-eric-setup.sh`
+`./arch-eric-setup.sh PASSWORD`
+
+
+
+
+
+
+:::::::::::::::::::
 On an existing archlinux environment, install archiso
 
 `sudo pacman -S archiso`
