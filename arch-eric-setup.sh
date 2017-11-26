@@ -294,7 +294,7 @@ configure() {
   sleep 5
   systemctl enable NetworkManager
   systemctl enable ntpd 
-  systemctl start gdm 
+  systemctl enable gdm 
 
   rm /arch-eric-setup.sh
 }
