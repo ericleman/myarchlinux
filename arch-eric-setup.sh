@@ -1,5 +1,7 @@
 #!/bin/bash
 set -x
+var1=$1
+var2=$2
 
 setup() {
   echo '************************************************'
@@ -50,7 +52,7 @@ setup() {
   echo '**************** Chrooting into installed system to continue setup...'
   cp $0 /mnt/arch-eric-setup.sh
   cp -R ./scripts/ /mnt/
-  arch-chroot /mnt ./arch-eric-setup.sh chroot $1
+  arch-chroot /mnt ./arch-eric-setup.sh chroot $var1
 
   if [ -f /mnt/arch-eric-setup.sh ]
   then
@@ -211,13 +213,13 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Setting root password'
-  echo -en "$1\n$1" | passwd
+  echo -en "$var2\n$var2" | passwd
 
   echo '************************************************'
   echo '************************************************'
   echo '**************** Creating initial user'
   useradd -m -s /bin/bash -G adm,systemd-journal,wheel,games,network,video,audio,optical,floppy,storage,scanner,power,input -c "Eric" eric
-  echo -en "$1\n$1" | passwd "eric"
+  echo -en "$var2\n$var2" | passwd "eric"
 
   echo '************************************************'
   echo '************************************************'
