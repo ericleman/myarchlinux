@@ -187,6 +187,9 @@ configure() {
   packages+=' yaourt'
   packages+=' zd1211-firmware'
 
+  packages+=' xrandr'
+  packages+=' arandr'
+
   # Wine
   #packages+=' winetricks lib32-libpulse lib32-gnutls wine lib32-libldap lib32-mpg123'
   # Gnome
