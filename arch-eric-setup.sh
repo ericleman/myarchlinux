@@ -262,15 +262,6 @@ configure() {
 
   echo '************************************************'
   echo '************************************************'
-  echo '**************** Setting initial daemons'
-  sleep 5
-  systemctl enable NetworkManager
-  systemctl enable syslog-ng
-  systemctl enable ntpd 
-  systemctl enable gdm 
-
-  echo '************************************************'
-  echo '************************************************'
   echo '**************** Configuring bootloader'
   sleep 5
   mkinitcpio -p linux 
@@ -296,6 +287,14 @@ configure() {
   chown eric /home/eric/gsettings.sh
   chmod 700 /home/eric/gsettings.sh
   #su eric -c "/home/eric/gsettings.sh"
+
+  echo '************************************************'
+  echo '************************************************'
+  echo '**************** Setting initial daemons'
+  sleep 5
+  systemctl enable NetworkManager
+  systemctl enable ntpd 
+  systemctl start gdm 
 
   rm /arch-eric-setup.sh
 }
