@@ -55,6 +55,8 @@ setup() {
   echo '**************** Chrooting into installed system to continue setup...'
   cp $0 /mnt/arch-eric-setup.sh
   cp -R ./scripts/ /mnt/
+  echo "var1:$var1"
+  echo "var2:$var2"
   arch-chroot /mnt ./arch-eric-setup.sh chroot $var1
 
   if [ -f /mnt/arch-eric-setup.sh ]
@@ -69,6 +71,9 @@ setup() {
 }
 
 configure() {
+  echo '**************** Starting Configure phase'
+  echo "var1:$var1"
+  echo "var2:$var2"
   echo '************************************************'
   echo '************************************************'
   echo '**************** Installing additional packages'
@@ -270,7 +275,6 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Configuring bootloader'
-  sleep 5
   mkinitcpio -p linux 
   grub-mkconfig -o /boot/grub/grub.cfg 
   grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck 
