@@ -187,6 +187,7 @@ configure() {
   packages+=' wget'
   packages+=' wireless-regdb'
   packages+=' xdg-user-dirs-gtk'
+  packages+=' xorg-server-xwayland'
   packages+=' yaourt'
   packages+=' zd1211-firmware'
 
