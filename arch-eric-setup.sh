@@ -187,8 +187,6 @@ configure() {
   packages+=' yaourt'
   packages+=' zd1211-firmware'
 
-  packages+=' xrandr'
-  packages+=' arandr'
 
   # Wine
   #packages+=' winetricks lib32-libpulse lib32-gnutls wine lib32-libldap lib32-mpg123'
@@ -231,8 +229,8 @@ configure() {
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
   su eric -c "yaourt -S --noconfirm gnome-shell-extension-topicons-plus"
   su eric -c "yaourt -S --noconfirm pamac-aur"
-  su eric -c "yaourt -S --noconfirm paper-icon-theme-git"
-  su eric -c "yaourt -S --noconfirm paper-gtk-theme-git"
+  #su eric -c "yaourt -S --noconfirm paper-icon-theme-git"
+  #su eric -c "yaourt -S --noconfirm paper-gtk-theme-git"
   #su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast"
 
   echo '************************************************'
