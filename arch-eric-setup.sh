@@ -3,6 +3,13 @@ set -x
 var1=$1
 var2=$2
 
+if [ -z "$1" ]
+  then
+    echo "Please provide password"
+    read var1
+fi
+
+
 echo "var1:$var1"
 echo "var2:$var2"
 
@@ -307,7 +314,7 @@ configure() {
   systemctl enable ntpd 
   systemctl enable gdm 
   
-  sed -i 's%#WaylandEnable%WaylandEnable%g' /etc/pacman.conf
+  sed -i 's%#WaylandEnable%WaylandEnable%g' /etc/gdm/custom.conf
 
   rm /arch-eric-setup.sh
 }
