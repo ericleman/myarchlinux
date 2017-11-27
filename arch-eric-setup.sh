@@ -238,9 +238,9 @@ configure() {
   su eric -c "yaourt -S --noconfirm sublime-text-dev"
   su eric -c "yaourt -S --noconfirm gnome-shell-extension-topicons-plus"
   su eric -c "yaourt -S --noconfirm pamac-aur"
-  #su eric -c "yaourt -S --noconfirm paper-icon-theme-git"
-  #su eric -c "yaourt -S --noconfirm paper-gtk-theme-git"
-  #su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast"
+  su eric -c "yaourt -S --noconfirm paper-icon-theme-git"
+  su eric -c "yaourt -S --noconfirm paper-gtk-theme-git"
+  su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast" # does not work with Wayland
 
   echo '************************************************'
   echo '************************************************'
@@ -265,9 +265,9 @@ configure() {
   echo '************************************************'
   echo '************************************************'
   echo '**************** Setting console keymap'
-  #create_mac_kmap
-  #gzip /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.kmap
-  #mv /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.kmap.gz /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.map.gz
+  create_mac_kmap
+  gzip /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.kmap
+  mv /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.kmap.gz /usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.map.gz
   #echo 'KEYMAP="mac-fr-ext_new"' >> /etc/vconsole.conf
   echo 'KEYMAP="fr-pc"' >> /etc/vconsole.conf
   echo 'CONSOLEFONT="lat9w-16"' >> /etc/vconsole.conf
@@ -306,6 +306,8 @@ configure() {
   systemctl enable NetworkManager
   systemctl enable ntpd 
   systemctl enable gdm 
+  
+  sed -i 's%#WaylandEnable%WaylandEnable%g' /etc/pacman.conf
 
   rm /arch-eric-setup.sh
 }
