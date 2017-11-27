@@ -295,6 +295,11 @@ configure() {
   chown eric /home/eric/.bashrc
   chmod 644 /home/eric/.bashrc
 
+  su eric -c "mkdir -p /home/eric/.config/gtk-3.0"
+  cp /scripts/gtk3settings /home/eric/.config/gtk-3.0/settings.ini
+  chown eric /home/eric/.config/gtk-3.0/settings.ini
+  chmod 644 /home/eric/.config/gtk-3.0/settings.ini
+
   cp /scripts/pamac.conf /etc/pamac.conf
   
   cp /scripts/xprofile /home/eric/.xprofile
