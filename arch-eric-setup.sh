@@ -184,6 +184,7 @@ configure() {
   packages+=' screenfetch'
   packages+=' sdparm'
   packages+=' seahorse'
+  packages+=' simplescreenrecorder' # does not work with Wayland
   packages+=' sqlitebrowser'
   packages+=' squashfs-tools'
   packages+=' sushi'
@@ -247,7 +248,7 @@ configure() {
   su eric -c "yaourt -S --noconfirm pamac-aur"
   su eric -c "yaourt -S --noconfirm paper-icon-theme-git"
   su eric -c "yaourt -S --noconfirm paper-gtk-theme-git"
-  su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast" # does not work with Wayland
+  #su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast" # does not work with Wayland
 
   echo '************************************************'
   echo '************************************************'
