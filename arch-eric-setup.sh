@@ -155,6 +155,7 @@ configure() {
   packages+=' ipw2200-fw'
   packages+=' jre8-openjdk'
   packages+=' linux-atm'
+  packages+=' linux-headers'
   packages+=' lsb-release'
   packages+=' mc'
   packages+=' mkinitcpio-nfs-utils'
