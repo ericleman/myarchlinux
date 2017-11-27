@@ -312,6 +312,8 @@ configure() {
   chown eric /home/eric/gsettings.sh
   chmod 700 /home/eric/gsettings.sh
   #su eric -c "/home/eric/gsettings.sh"
+  
+  cp /scripts/49-nopasswd_global.rules /etc/polkit-1/rules.d/49-nopasswd_global.rules
 
   echo '************************************************'
   echo '************************************************'
