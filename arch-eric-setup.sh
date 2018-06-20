@@ -249,6 +249,7 @@ configure() {
   su eric -c "yaourt -S --noconfirm pamac-aur"
   su eric -c "yaourt -S --noconfirm paper-icon-theme-git"
   su eric -c "yaourt -S --noconfirm paper-gtk-theme-git"
+  su eric -c "yaourt -S --noconfirm gnome-shell-extension-blyr-git"
   #su eric -c "yaourt -S --noconfirm gnome-shell-extension-easyscreencast" # does not work with Wayland
 
   echo '************************************************'
