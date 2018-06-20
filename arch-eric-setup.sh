@@ -302,6 +302,9 @@ configure() {
   cp /scripts/gtk3settings /home/eric/.config/gtk-3.0/settings.ini
   chown eric /home/eric/.config/gtk-3.0/settings.ini
   chmod 644 /home/eric/.config/gtk-3.0/settings.ini
+  cp /scripts/gtk.css /home/eric/.config/gtk-3.0/gtk.css
+  chown eric /home/eric/.config/gtk-3.0/gtk.css
+  chmod 644 /home/eric/.config/gtk-3.0/gtk.css
 
   cp /scripts/pamac.conf /etc/pamac.conf
   
